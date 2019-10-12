@@ -1,41 +1,46 @@
 <script>
   import Nav from "../components/Nav.svelte";
+  import Footer from "../components/Footer.svelte";
 
   export let segment;
   let dark = false;
 
   export function toggleDarkMode() {
-    return dark = !dark
+    window.document.body.classList.toggle('dark-mode');
+    dark != dark;
   }
 
 </script>
 
 <style>
   #Wrapper {
-    background-color: #f7fcfc;
-    color: #13131c;
+    display: grid;
+    grid-template-rows: 58px 1fr 42px;
     height: 100vh;
-  }
-
-  #Wrapper.dark {
-    background-color: #13131c;
-    color: #f7fcfc;
   }
 
   main {
     position: relative;
-    max-width: 56em;
-    padding: 2em;
-    margin: 0 auto;
+    max-width: 50em;
+    margin: 2rem auto 0 auto;
     box-sizing: border-box;
+    background-color: inherit;
+    padding: 0 2rem 3rem;
   }
+
+  @media (max-width: 599px) {
+	main {
+    padding: 0 2rem 2.5rem;
+  }
+}
 </style>
 
-<div id="Wrapper" class:dark>
-  <Nav {segment} on:darkmode={toggleDarkMode} />
-
+<div id="Wrapper">
+  <Nav {segment} on:toggle={toggleDarkMode} />
 
   <main>
     <slot />
   </main>
+
+  <Footer />
 </div>
