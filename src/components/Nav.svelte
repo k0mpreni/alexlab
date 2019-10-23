@@ -1,6 +1,7 @@
 <script>
   import Slider from "./Slider.svelte";
   export let segment;
+  export let dark;
 </script>
 
 <style>
@@ -63,7 +64,7 @@
     </li>
 
     <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
+		    the blog data when we hover over the link or tap it on a touchscreen -->
     <li>
       <a
         rel="prefetch"
@@ -73,5 +74,5 @@
       </a>
     </li>
   </ul>
-  <Slider on:toggle />
+  <Slider on:toggle checked={dark} />
 </nav>

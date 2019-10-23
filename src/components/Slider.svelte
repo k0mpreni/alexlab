@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
+  export let checked;
 
   const dispatch = createEventDispatcher();
 
@@ -80,7 +81,7 @@
 
 <div class="slider-wrapper">
   <label class="switch">
-    <input type="checkbox" on:click={toggle} aria-label="switch" />
+    <input type="checkbox" on:click={toggle} aria-label="switch" bind:checked={checked} />
     <span class="slider round" />
   </label>
 </div>
