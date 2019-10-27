@@ -39,22 +39,27 @@
   #Wrapper {
     display: grid;
     grid-template-rows: 58px 1fr 42px;
+    grid-template-columns: 20% 1fr 20%;
     height: 100vh;
   }
 
   main {
     position: relative;
     max-width: 50em;
-    margin: 2rem auto 0 auto;
     box-sizing: border-box;
     background-color: inherit;
-    padding: 0 2rem 3rem;
+    margin-top: 2rem;
+    grid-column: 2/3;
   }
 
   @media (max-width: 599px) {
     main {
       padding: 0 2rem 2.5rem;
     }
+
+    #Wrapper {
+      grid-template-columns: 2% 1fr 2%;
+  }
   }
 </style>
 

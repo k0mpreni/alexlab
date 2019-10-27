@@ -6,9 +6,9 @@
 
 <style>
   nav {
+    grid-column: 2/3;
     border-bottom: 2px solid rgb(4, 219, 176, 0.1);
     font-weight: 300;
-    padding: 0 1em;
     display: flex;
     flex: 1;
     flex-direction: row;

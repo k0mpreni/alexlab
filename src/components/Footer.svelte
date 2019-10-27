@@ -3,6 +3,7 @@
 
 <style>
   footer {
+    grid-column: 2/3;
     font-weight: 300;
     display: flex;
     flex: 1;
