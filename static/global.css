@@ -11,9 +11,15 @@ body {
   body {
     background-color: #f7fcfc;
     color: #13131c;
+    fill: #13131c;
     height: 100%;
   }
-
+  .dark-mode {
+    background-color: #13131c;
+    color: #f7fcfc;
+    fill: #f7fcfc;
+    height: 100%;
+  }
 }
 
 /* Dark mode */
@@ -24,19 +30,14 @@ body {
     fill: #f7fcfc;
     height: 100%;
   }
+  body.light-mode {
+    background-color: #f7fcfc;
+    color: #13131c;
+    fill: #13131c;
+    height: 100%;
+  }
 }
 
-.light-mode {
-  background-color: #f7fcfc;
-  color: #13131c;
-  height: 100%;
-}
-.dark-mode {
-  background-color: #13131c;
-  color: #f7fcfc;
-  fill: #f7fcfc;
-  height: 100%;
-}
 
 h1,
 h2,
