@@ -45,11 +45,12 @@
 
   main {
     position: relative;
-    max-width: 50em;
     box-sizing: border-box;
     background-color: inherit;
     margin-top: 2rem;
     grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
   }
 
   @media (max-width: 599px) {
