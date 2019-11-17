@@ -1,50 +1,35 @@
 body {
   margin: 0;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 14px;
   line-height: 1.5;
 }
 
-/* Light mode */
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: #f7fcfc;
-    color: #13131c;
-    fill: #13131c;
-    height: 100%;
-  }
-  .dark-mode {
-    background-color: #13131c;
-    color: #f7fcfc;
-    fill: #f7fcfc;
-    height: 100%;
-  }
+html[data-theme=light] {
+  background-color: #f7fcfc;
+  color: #13131c;
+  fill: #13131c;
+  height: 100%;
 }
 
-/* Dark mode */
 @media (prefers-color-scheme: dark) {
-  body {
+  html {
     background-color: #13131c;
     color: #f7fcfc;
     fill: #f7fcfc;
     height: 100%;
   }
-  body.light-mode {
-    background-color: #f7fcfc;
-    color: #13131c;
-    fill: #13131c;
-    height: 100%;
-  }
+}
+
+html[data-theme=dark] {
+  background-color: #13131c;
+  color: #f7fcfc;
+  fill: #f7fcfc;
+  height: 100%;
 }
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5em 0;
   font-weight: 400;
   line-height: 1.2;

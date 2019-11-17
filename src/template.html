@@ -9,7 +9,17 @@
 
 	<link rel='stylesheet' href='global.css'>
 	<link rel='manifest' href='manifest.json'>
-	<link rel='icon' type='image/png' href='favicon.png'>
+  <link rel='icon' type='image/png' href='favicon.png'>
+  <script>
+    const theme = localStorage.getItem('theme');
+    if (theme === "dark") {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    if (theme === "light") {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  </script>
 
 	<!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is

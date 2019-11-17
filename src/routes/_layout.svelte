@@ -7,31 +7,27 @@
   let dark = false;
 
   onMount(() => {
-    const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)")
-      .matches;
-    const isLightMode = window.matchMedia("(prefers-color-scheme: light)")
-      .matches;
-    if (isDarkMode) {
-      window.document.body.classList.remove("light-mode");
-      window.document.body.classList.add("dark-mode");
-      dark = true
-    }
+    let currentMode = document.documentElement.getAttribute("data-theme");
+    const isDarkMode = currentMode === "dark" || window.matchMedia("(prefers-color-scheme: dark)")
+      .matches && currentMode !== "light";
 
-    if (isLightMode) {
-      window.document.body.classList.remove("dark-mode");
-      window.document.body.classList.remove("light-mode");
-      dark = false
-    }
+    dark = isDarkMode
   });
 
   afterUpdate(() => {
-      // toggleDarkMode();
   });
 
   export function toggleDarkMode() {
-    window.document.body.classList.toggle("dark-mode");
-    window.document.body.classList.toggle("light-mode");
-    dark != dark;
+    let currentMode = document.documentElement.getAttribute("data-theme");
+    const isDarkMode = currentMode === "dark" || window.matchMedia("(prefers-color-scheme: dark)")
+      .matches && currentMode !== "light";
+    if (isDarkMode) {
+      document.documentElement.setAttribute("data-theme", "light");
+      window.localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+      window.localStorage.setItem("theme", "dark");
+    }
   }
 </script>
 
@@ -60,7 +56,7 @@
 
     #Wrapper {
       grid-template-columns: 2% 1fr 2%;
-  }
+    }
   }
 </style>
 
