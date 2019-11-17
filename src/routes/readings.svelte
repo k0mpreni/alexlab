@@ -107,24 +107,22 @@
 
 <style>
   ul {
-    display: flex;
-    flex-flow: wrap;
     list-style: none;
     padding: 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    justify-content: stretch;
+    align-items: stretch;
   }
 
   li {
-    width: 14rem;
-    display: grid;
-    align-items: center;
     -webkit-box-shadow: 10px 10px 5px -4px rgba(0, 0, 0, 0.14);
     -moz-box-shadow: 10px 10px 5px -4px rgba(0, 0, 0, 0.14);
     box-shadow: 10px 10px 5px -4px rgba(0, 0, 0, 0.14);
     padding: 0.8rem;
     border: 1px solid #ed174b;
-    margin: 7px;
-    grid-template-rows: 5rem 1fr;
-    justify-content: center;
     text-align: center;
   }
 
@@ -144,9 +142,9 @@
     <li class:finished>
       <h2>{title}</h2>
       <p>
-        <i>from: {author}</i>
+        <i>From: {author}</i>
       </p>
-      <p>{media}</p>
+      <p>Media: {media}</p>
     </li>
   {/each}
 </ul>
