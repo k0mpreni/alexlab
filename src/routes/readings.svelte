@@ -1,4 +1,7 @@
 <script>
+  import { slide } from "svelte/transition";
+  import { quintInOut } from "svelte/easing";
+
   const books = [
     {
       title: "Contruire un feu",
@@ -135,16 +138,20 @@
   }
 </style>
 
-<h1>My 2019 reading list</h1>
+<div transition:slide={{ delay: 0, duration: 250, easing: quintInOut }}>
 
-<ul>
-  {#each books as { title, author, media, finished }}
-    <li class:finished>
-      <h2>{title}</h2>
-      <p>
-        <i>From: {author}</i>
-      </p>
-      <p>Media: {media}</p>
-    </li>
-  {/each}
-</ul>
+  <h1>My 2019 reading list</h1>
+
+  <ul>
+    {#each books as { title, author, media, finished }}
+      <li class:finished>
+        <h2>{title}</h2>
+        <p>
+          <i>From: {author}</i>
+        </p>
+        <p>Media: {media}</p>
+      </li>
+    {/each}
+  </ul>
+
+</div>

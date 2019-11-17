@@ -1,3 +1,8 @@
+<script>
+  import { slide } from "svelte/transition";
+  import { quintInOut } from "svelte/easing";
+</script>
+
 <style>
   .wrapper {
     line-height: 2rem;
@@ -8,7 +13,9 @@
   <title>Alex Lab</title>
 </svelte:head>
 
-<div class="wrapper">
+<div
+  class="wrapper"
+  transition:slide={{ delay: 0, duration: 300, easing: quintInOut }}>
   <p>🤖 French and german developer here ! 🤖</p>
   <p>
     🎓I did a Higher National Diploma in International Business in sandwich
@@ -31,8 +38,8 @@
     communication, kindness, learning to perform.
   </p>
   <p>
-    I currently learn a lot by myself about computer science and related
-    topics especially cybersecurity.
+    I currently learn a lot by myself about computer science and related topics
+    especially cybersecurity.
   </p>
 
 </div>

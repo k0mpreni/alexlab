@@ -1,3 +1,8 @@
+<script>
+  import { slide } from "svelte/transition";
+  import { quintInOut } from "svelte/easing";
+</script>
+
 <style>
   ul {
     margin: 0 0 1em 0;
@@ -5,6 +10,7 @@
   }
 </style>
 
+<div transition:slide={{ delay: 0, duration: 250, easing: quintInOut }}>
 <h1>Random stuff</h1>
 
 <ul>
@@ -12,3 +18,4 @@
     <a href="readings">My 2019 readings</a>
   </li>
 </ul>
+</div>

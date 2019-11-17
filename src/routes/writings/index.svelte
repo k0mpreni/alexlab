@@ -1,4 +1,6 @@
 <script context="module">
+  import { slide } from "svelte/transition";
+  import { quintInOut } from "svelte/easing";
   export function preload({ params, query }) {
     return this.fetch(`writings.json`)
       .then(r => r.json())
@@ -23,25 +25,25 @@
   <title>Writings</title>
 </svelte:head>
 
-<div>
+<div transition:slide={{ delay: 0, duration: 300, easing: quintInOut }}>
 
-<h1>Writings</h1>
+  <h1>Writings</h1>
 
-<ul>
-  {#each posts as post}
-    <!-- we're using the non-standard `rel=prefetch` attribute to
+  <ul>
+    {#each posts as post}
+      <!-- we're using the non-standard `rel=prefetch` attribute to
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-    <li>
-      <a
-        rel="prefetch noopener noreferrer"
-        href={post.link ? post.link : 'writings/' + post.slug}
-        target="_blank">
-        {post.title}
-      </a>
-    </li>
-  {/each}
-</ul>
+      <li>
+        <a
+          rel="prefetch noopener noreferrer"
+          href={post.link ? post.link : 'writings/' + post.slug}
+          target="_blank">
+          {post.title}
+        </a>
+      </li>
+    {/each}
+  </ul>
 
 </div>
