@@ -9,7 +9,7 @@
 </svelte:head>
 
 <div class="wrapper">
-  <p>🇫🇷 French and german 🇩🇪 developer here ! 🤖</p>
+  <p>🤖 French and german developer here ! 🤖</p>
   <p>
     🎓I did a Higher National Diploma in International Business in sandwich
     courses.
@@ -31,7 +31,7 @@
     communication, kindness, learning to perform.
   </p>
   <p>
-    🗝 I currently learn a lot by myself about computer science and related
+    I currently learn a lot by myself about computer science and related
     topics especially cybersecurity.
   </p>
 
