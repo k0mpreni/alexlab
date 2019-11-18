@@ -1,5 +1,5 @@
 import sirv from 'sirv';
-import polka from 'polka';
+import express from 'express';
 import compression from 'compression';
 import * as sapper from '@sapper/server';
 import uuidv4 from 'uuid/v4';
@@ -9,7 +9,7 @@ import expectCt from 'expect-ct';
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
-polka() // You can also use Express
+express() // You can also use Express
   .use((req, res, next) => {
     res.locals.nonce = uuidv4();
     next();
