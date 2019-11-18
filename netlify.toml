@@ -1,0 +1,11 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Strict-Transport-Security = "max-age = 31536000; includeSubDomains"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Permitted-Cross-Domain-Policies = "none"
+    Feature-Policy = "camera ‘none’; microphone ‘none’; speaker ‘self’; vibrate ‘none’; geolocation ‘none’; accelerometer ‘none’; ambient-light-sensor ‘none’; autoplay ‘none’; encrypted-media ‘none’; gyroscope ‘none’; magnetometer ‘none’; midi ‘none’; payment ‘none’; picture-in-picture ‘none’; usb ‘none’; vr ‘none’; fullscreen *;"
+    X-Powered-By = "Electricity"
