@@ -103,7 +103,7 @@
       title: "Dune",
       author: "Frank Herbert",
       media: "book",
-      finished: false
+      finished: true
     }
   ];
 </script>
