@@ -97,7 +97,7 @@
       title: "De la constance du sage",
       author: "Sénèque",
       media: "book",
-      finished: false
+      finished: true
     },
     {
       title: "Dune",
