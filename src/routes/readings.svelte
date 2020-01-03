@@ -1,6 +1,6 @@
 <script>
   import { slide } from "svelte/transition";
-  import { quintInOut } from "svelte/easing";
+  import { sineOut } from "svelte/easing";
 
   const books = [
     {
@@ -104,7 +104,19 @@
       author: "Frank Herbert",
       media: "book",
       finished: true
-    }
+    },
+{
+      title: "Le joueur d'échecs",
+      author: "Stefan Zweig",
+      media: "book",
+      finished: true
+    },
+    {
+      title: "De la tranquilité de l'âme",
+      author: "Sénèque",
+      media: "book",
+      finished: true
+    },
   ];
 </script>
 
@@ -138,7 +150,7 @@
   }
 </style>
 
-<div transition:slide={{ delay: 0, duration: 250, easing: quintInOut }}>
+<div transition:slide={{ delay: 0, duration: 250, easing: sineOut }}>
 
   <h1>My 2019 reading list</h1>
 

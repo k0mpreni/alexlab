@@ -1,6 +1,6 @@
 <script context="module">
   import { slide } from "svelte/transition";
-  import { quintInOut } from "svelte/easing";
+  import { sineOut } from "svelte/easing";
   export function preload({ params, query }) {
     return this.fetch(`writings.json`)
       .then(r => r.json())
@@ -25,7 +25,7 @@
   <title>Writings</title>
 </svelte:head>
 
-<div transition:slide={{ delay: 0, duration: 300, easing: quintInOut }}>
+<div transition:slide={{ delay: 0, duration: 250, easing: sineOut }}>
 
   <h1>Writings</h1>
 

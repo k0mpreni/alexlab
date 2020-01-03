@@ -1,6 +1,6 @@
 <script>
   import { slide } from "svelte/transition";
-  import { quintInOut } from "svelte/easing";
+  import { sineOut } from "svelte/easing";
 </script>
 
 <style>
@@ -15,7 +15,7 @@
 
 <div
   class="wrapper"
-  transition:slide={{ delay: 0, duration: 300, easing: quintInOut }}>
+  transition:slide={{ delay: 0, duration: 250, easing: sineOut }}>
   <p>🤖 French and german developer here ! 🤖</p>
   <p>
     🎓I did a Higher National Diploma in International Business in sandwich

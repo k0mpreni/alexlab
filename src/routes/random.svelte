@@ -1,6 +1,6 @@
 <script>
   import { slide } from "svelte/transition";
-  import { quintInOut } from "svelte/easing";
+  import { sineOut } from "svelte/easing";
 </script>
 
 <style>
@@ -10,7 +10,7 @@
   }
 </style>
 
-<div transition:slide={{ delay: 0, duration: 250, easing: quintInOut }}>
+<div transition:slide={{ delay: 0, duration: 250, easing: sineOut }}>
 <h1>Random stuff</h1>
 
 <ul>

@@ -18,17 +18,6 @@ express() // You can also use Express
     maxAge: 31536000,
     includeSubDomains: true
   }))
-  .use(
-    helmet({
-      contentSecurityPolicy: {
-        directives: {
-          defaultSrc: ["'self'"],
-          scriptSrc: ["'self'", (req, res) => `'nonce-${res.locals.nonce}'`],
-          blockAllMixedContent: true
-        }
-      }
-    })
-  )
   .use(helmet.xssFilter())
   .use(helmet.referrerPolicy({ policy: 'strict-origin-when-cross-origin' }))
   .use(
