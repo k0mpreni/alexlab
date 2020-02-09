@@ -13,6 +13,11 @@ const posts = [
     slug: 'vsode-frustration-to-vscode-love',
     link: 'https://dev.to/brainlulz/vscode-frustration-to-vscode-love-5b5k'
 	},
+	{
+		title: '[FR] Application Threat Modeling 🇫🇷',
+    slug: 'fr-application-threat-modeling',
+    link: 'https://dev.to/brainlulz/fr-application-threat-modeling-4cj6'
+	},
 ];
 
 export default posts;
