@@ -1,23 +1,38 @@
-// Ordinarily, you'd generate this data from markdown files in your
-// repo, or fetch them from a database of some kind. But in order to
-// avoid unnecessary dependencies in the starter template, and in the
-// service of obviousness, we're just going to leave it here.
+import all from './posts/*.md'
 
-// This file is called `_posts.js` rather than `posts.js`, because
-// we don't want to create an `/writings/posts` route — the leading
-// underscore tells Sapper not to do that.
+import _ from 'lodash'
 
-const posts = [
-	{
-		title: 'VSCode frustration to VSCode love ♥ ',
-    slug: 'vsode-frustration-to-vscode-love',
-    link: 'https://dev.to/brainlulz/vscode-frustration-to-vscode-love-5b5k'
-	},
-	{
-		title: '[FR] Application Threat Modeling 🇫🇷',
-    slug: 'fr-application-threat-modeling',
-    link: 'https://dev.to/brainlulz/fr-application-threat-modeling-4cj6'
-	},
-];
+export const posts = _.chain(all) // begin a chain
+  .map(transform) // transform the shape of each post
+  .orderBy('date', 'desc') // sort by date descending
+  .value() // convert chain back to array
 
-export default posts;
+// function for reshaping each post
+function transform({
+  filename,
+  html,
+  metadata
+}) {
+  // the permalink is the filename with the '.md' ending removed
+  const permalink = filename.replace(/\.md$/, '')
+
+  // convert date string into a proper `Date`
+  const date = new Date(metadata.date)
+
+  // return the new shape
+  return {
+    ...metadata,
+    filename,
+    html,
+    permalink,
+    date
+  }
+}
+
+// provide a way to find a post by permalink
+export function findPost(permalink) {
+  // use lodash to find by field name:
+  return _.find(posts, {
+    permalink
+  })
+}

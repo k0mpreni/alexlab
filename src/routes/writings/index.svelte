@@ -1,17 +1,7 @@
 <script context="module">
   import { slide } from "svelte/transition";
   import { sineOut } from "svelte/easing";
-  export function preload({ params, query }) {
-    return this.fetch(`writings.json`)
-      .then(r => r.json())
-      .then(posts => {
-        return { posts };
-      });
-  }
-</script>
-
-<script>
-  export let posts;
+  import { posts } from "./_posts";
 </script>
 
 <style>
@@ -26,24 +16,12 @@
 </svelte:head>
 
 <div transition:slide={{ delay: 0, duration: 250, easing: sineOut }}>
-
   <h1>Writings</h1>
-
   <ul>
     {#each posts as post}
-      <!-- we're using the non-standard `rel=prefetch` attribute to
-				tell Sapper to load the data for the page as soon as
-				the user hovers over the link or taps it, instead of
-				waiting for the 'click' event -->
       <li>
-        <a
-          rel="prefetch noopener noreferrer"
-          href={post.link ? post.link : 'writings/' + post.slug}
-          target="_blank">
-          {post.title}
-        </a>
+        <a href={`/writings/${post.permalink}`}>{post.title}</a>
       </li>
     {/each}
   </ul>
-
 </div>

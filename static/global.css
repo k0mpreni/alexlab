@@ -28,7 +28,6 @@ html[data-theme=dark] {
   height: 100%;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5em 0;
   font-weight: 400;
@@ -41,6 +40,11 @@ h1 {
 
 a {
   color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 code {
