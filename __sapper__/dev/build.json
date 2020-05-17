@@ -2,25 +2,29 @@
   "bundler": "rollup",
   "shimport": "1.0.1",
   "assets": {
-    "main": "client.0bc074bd.js"
+    "main": "client.f5ce495e.js"
   },
   "css": {
     "main": "main.773194288.css",
     "chunks": {
       "index.svelte": [
-        "index.606421c1.css"
+        "index.7d63ee5e.css"
+      ],
+      "experiments/wasm-calculator/index.svelte": [],
+      "experiments/wasm-identicon/index.svelte": [
+        "index.57b9b581.css"
       ],
       "readings.svelte": [
-        "readings.2730ddb2.css"
+        "readings.92cada17.css"
       ],
       "writings/index.svelte": [
-        "index.160516c2.css"
+        "index.df7a6e47.css"
       ],
       "writings/[permalink].svelte": [
-        "[permalink].1795560a.css"
+        "[permalink].04a8ce1b.css"
       ],
       "random.svelte": [
-        "random.20e05f79.css"
+        "random.307bedc9.css"
       ]
     }
   }

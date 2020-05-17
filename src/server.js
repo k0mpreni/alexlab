@@ -4,7 +4,6 @@ import compression from 'compression';
 import * as sapper from '@sapper/server';
 import uuidv4 from 'uuid/v4';
 import helmet from 'helmet';
-import expectCt from 'expect-ct';
 
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';

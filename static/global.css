@@ -12,12 +12,44 @@ html[data-theme=light] {
   height: 100%;
 }
 
+html[data-theme=light] button {
+  border: 1px solid #13131c;
+  padding: 5px 10px;
+  background: #13131c;
+  border-radius: 2px;
+  color: #f7fcfc;
+}
+
+html[data-theme=light] input {
+  padding: 10px;
+  background: #f7fcfc;
+  color: #13131c;
+  border: 1px solid #13131c;
+}
+
+button:active {
+  text-decoration: underline;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     background-color: #13131c;
     color: #f7fcfc;
     fill: #f7fcfc;
     height: 100%;
+  }
+  button {
+    border: 1px solid #f7fcfc;
+    padding: 5px 10px;
+    background: #f7fcfc;
+    border-radius: 2px;
+    color: #13131c;
+  }
+  input {
+    padding: 10px;
+    background: #13131c;
+    color: #f7fcfc;
+    border: 1px solid #f7fcfc;
   }
 }
 
@@ -26,6 +58,21 @@ html[data-theme=dark] {
   color: #f7fcfc;
   fill: #f7fcfc;
   height: 100%;
+}
+
+html[data-theme=dark] button {
+  border: 1px solid #f7fcfc;
+  padding: 5px 10px;
+  background: #f7fcfc;
+  border-radius: 2px;
+  color: #13131c;
+}
+
+html[data-theme=dark] input {
+  padding: 10px;
+  background: #13131c;
+  color: #f7fcfc;
+  border: 1px solid #f7fcfc;
 }
 
 h1, h2, h3, h4, h5, h6 {
