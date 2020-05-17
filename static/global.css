@@ -5,14 +5,14 @@ body {
   line-height: 1.5;
 }
 
-html[data-theme=light] {
+html, html[data-theme=light] {
   background-color: #f7fcfc;
   color: #13131c;
   fill: #13131c;
   height: 100%;
 }
 
-html[data-theme=light] button {
+button, html[data-theme=light] button {
   border: 1px solid #13131c;
   padding: 5px 10px;
   background: #13131c;
@@ -20,7 +20,7 @@ html[data-theme=light] button {
   color: #f7fcfc;
 }
 
-html[data-theme=light] input {
+input, html[data-theme=light] input {
   padding: 10px;
   background: #f7fcfc;
   color: #13131c;
