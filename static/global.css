@@ -94,6 +94,10 @@ img {
   height: auto;
 }
 
+pre {
+  background-color: #f0f0f0;
+}
+
 code {
   font-family: menlo, inconsolata, monospace;
   font-size: calc(1em - 2px);

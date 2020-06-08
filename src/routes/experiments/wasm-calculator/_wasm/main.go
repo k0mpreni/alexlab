@@ -12,6 +12,7 @@ func add(this js.Value, i []js.Value) interface{} {
 func subtract(this js.Value, i []js.Value) interface{} {
 	return js.ValueOf(i[0].Int() - i[1].Int())
 }
+
 func registerCallbacks() {
 	emptyWASMObject := make(map[string]interface{})
 	js.Global().Set("WASMGo", js.ValueOf(emptyWASMObject))

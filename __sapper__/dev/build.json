@@ -2,7 +2,7 @@
   "bundler": "rollup",
   "shimport": "1.0.1",
   "assets": {
-    "main": "client.d73e4fb7.js"
+    "main": "client.94bf6191.js"
   },
   "css": {
     "main": "main.773194288.css",
@@ -12,16 +12,16 @@
       ],
       "experiments/wasm-calculator/index.svelte": [],
       "experiments/wasm-identicon/index.svelte": [
-        "index.57b9b581.css"
+        "index.5efc8839.css"
       ],
       "readings.svelte": [
         "readings.92cada17.css"
       ],
       "writings/index.svelte": [
-        "index.8655af74.css"
+        "index.5790158c.css"
       ],
       "writings/[permalink].svelte": [
-        "[permalink].83abefed.css"
+        "[permalink].fe80cc58.css"
       ],
       "random.svelte": [
         "random.307bedc9.css"

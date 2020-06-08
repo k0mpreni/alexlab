@@ -33,7 +33,7 @@
   function loadIcon() {
     const value = document.getElementById("identicon").value;
     const buf = WASMGo.identicon(value);
-    let blob = new Blob([buf], {
+    const blob = new Blob([buf], {
       type: "png"
     });
     imgUrl = URL.createObjectURL(blob);
