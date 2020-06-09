@@ -2,9 +2,6 @@
   import { onMount, afterUpdate } from "svelte";
   import Nav from "../components/Nav.svelte";
   import Footer from "../components/Footer.svelte";
-  import "@beyonk/gdpr-cookie-consent-banner/dist/style.css"; // optional, you can also define your own styles
-  import CookieConsent from "../components/CookieConsent.svelte";
-
   export let segment;
   let dark = false;
 
@@ -65,11 +62,6 @@
   }
 </style>
 
-<!-- <CookieConsent
-  heading="Cookie Consent"
-  cookieName="GDPR"
-  description="This site use cookies to analyze site traffic"
-  on:analytics={enableAnalytics} /> -->
 
 <div id="Wrapper">
   <Nav {segment} on:toggle={toggleDarkMode} {dark} />
