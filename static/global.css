@@ -112,3 +112,15 @@ code {
     font-size: 16px;
   }
 }
+
+.cookieConsent__Button {
+  color: black;
+}
+
+.cookieConsentToggle {
+  color: black;
+}
+
+.cookieConsentToggle:hover {
+  color: white;
+}

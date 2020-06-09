@@ -51,7 +51,7 @@ The **WebAssembly module** can also import and synchronously call Javascript fun
 
 16 stable languages suitable for a production usage: .Net, C#, C, C++, Go, Rust, AssemblyScript...
 
-20 unstable but usabl: PHP, Python, Javascript, Ruby, Java, Kotlin/Native, ...
+20 unstable but usable: PHP, Python, Javascript, Ruby, Java, Kotlin/Native, ...
 
 11 WIP: Ocaml, Haskell,...
 
@@ -69,13 +69,13 @@ As you can see, I'm using a `go` file. that you can find on the [repository here
 
 Let's decompose it.
 
-Fist as a Go file, you give the file a name to the package, here "main".
+First as a Go file, you give the file a name to the package, here "main".
 
 ```go
 package main
 ```
 
-After that, you have your imports, here `"fmt"` (formatted I/O) used to print to the console that "WASM Go Initialized". The we import `"syscall/js"`, the js package that gives access to the WebAssembly host environment.
+After that, you have your imports, here `"fmt"` (formatted I/O) used to print to the console that "WASM Go Initialized". Then we import `"syscall/js"`, the js package that gives access to the WebAssembly host environment.
 
 ```go
 import (

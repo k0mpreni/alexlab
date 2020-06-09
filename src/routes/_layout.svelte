@@ -2,25 +2,30 @@
   import { onMount, afterUpdate } from "svelte";
   import Nav from "../components/Nav.svelte";
   import Footer from "../components/Footer.svelte";
+  import "@beyonk/gdpr-cookie-consent-banner/dist/style.css"; // optional, you can also define your own styles
+  import CookieConsent from "../components/CookieConsent.svelte";
 
   export let segment;
   let dark = false;
 
   onMount(() => {
     let currentMode = document.documentElement.getAttribute("data-theme");
-    const isDarkMode = currentMode === "dark" || window.matchMedia("(prefers-color-scheme: dark)")
-      .matches && currentMode !== "light";
+    const isDarkMode =
+      currentMode === "dark" ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+        currentMode !== "light");
 
-    dark = isDarkMode
+    dark = isDarkMode;
   });
 
-  afterUpdate(() => {
-  });
+  afterUpdate(() => {});
 
   export function toggleDarkMode() {
     let currentMode = document.documentElement.getAttribute("data-theme");
-    const isDarkMode = currentMode === "dark" || window.matchMedia("(prefers-color-scheme: dark)")
-      .matches && currentMode !== "light";
+    const isDarkMode =
+      currentMode === "dark" ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+        currentMode !== "light");
     if (isDarkMode) {
       document.documentElement.setAttribute("data-theme", "light");
       window.localStorage.setItem("theme", "light");
@@ -59,6 +64,12 @@
     }
   }
 </style>
+
+<!-- <CookieConsent
+  heading="Cookie Consent"
+  cookieName="GDPR"
+  description="This site use cookies to analyze site traffic"
+  on:analytics={enableAnalytics} /> -->
 
 <div id="Wrapper">
   <Nav {segment} on:toggle={toggleDarkMode} {dark} />
