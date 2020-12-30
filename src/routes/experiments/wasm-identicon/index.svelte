@@ -44,7 +44,7 @@
   img {
     height: 500px;
     margin-top: 2rem;
-    width: 500px;
+    max-width: 500px;
   }
 </style>
 

@@ -2,35 +2,17 @@
   "bundler": "rollup",
   "shimport": "1.0.1",
   "assets": {
-<<<<<<< HEAD
-    "main": "client.6f5424d1.js"
-||||||| parent of 0a668c1... add 2020 reading list
-    "main": "client.f5ce495e.js"
-=======
-    "main": "client.f20379b1.js"
->>>>>>> 0a668c1... add 2020 reading list
+    "main": "client.eff4a93b.js"
   },
   "css": {
-<<<<<<< HEAD
-    "main": "main.4133044606.css",
-||||||| parent of 0a668c1... add 2020 reading list
     "main": "main.773194288.css",
-=======
-    "main": "main.339943280.css",
->>>>>>> 0a668c1... add 2020 reading list
     "chunks": {
       "index.svelte": [
         "index.7d63ee5e.css"
       ],
       "experiments/wasm-calculator/index.svelte": [],
       "experiments/wasm-identicon/index.svelte": [
-<<<<<<< HEAD
-        "index.5efc8839.css"
-||||||| parent of 0a668c1... add 2020 reading list
-        "index.57b9b581.css"
-=======
-        "index.14b58b39.css"
->>>>>>> 0a668c1... add 2020 reading list
+        "index.45c85b16.css"
       ],
       "readings/2019.svelte": [
         "2019.ff401cea.css"
@@ -39,22 +21,10 @@
         "2020.8eca8d46.css"
       ],
       "writings/index.svelte": [
-<<<<<<< HEAD
-        "index.6939ca20.css"
-||||||| parent of 0a668c1... add 2020 reading list
-        "index.df7a6e47.css"
-=======
-        "index.a886fbc4.css"
->>>>>>> 0a668c1... add 2020 reading list
+        "index.f8c8a84d.css"
       ],
       "writings/[permalink].svelte": [
-<<<<<<< HEAD
-        "[permalink].785e0902.css"
-||||||| parent of 0a668c1... add 2020 reading list
-        "[permalink].04a8ce1b.css"
-=======
-        "[permalink].db1a39e0.css"
->>>>>>> 0a668c1... add 2020 reading list
+        "[permalink].031125d0.css"
       ],
       "random.svelte": [
         "random.be17c1da.css"

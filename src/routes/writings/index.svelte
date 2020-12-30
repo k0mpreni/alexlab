@@ -18,6 +18,14 @@
 <div transition:slide={{ delay: 0, duration: 250, easing: sineOut }}>
   <h1>Writings</h1>
   <ul>
+    <li>
+      <a
+        href="https://www.ekino.com/articles/passwords-are-boring"
+        target="_blank"
+        rel="noopener noreferrer">
+        Passwords are boring
+      </a>
+    </li>
     {#each posts as post}
       <li>
         <a href={`/writings/${post.permalink}`}>{post.title}</a>
