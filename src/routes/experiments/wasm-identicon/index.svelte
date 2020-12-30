@@ -62,7 +62,7 @@
   </p>
 
   <form on:submit|preventDefault={loadIcon}>
-    <input type="identicon" id="identicon" />
+    <input type="identicon" id="identicon" placeholder="Add a random word here"/>
     <button type="submit">Generate</button>
   </form>
   {#if imgUrl}

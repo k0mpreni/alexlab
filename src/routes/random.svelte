@@ -28,7 +28,10 @@
   <h2>Readings</h2>
   <ul>
     <li>
-      <a href="readings" rel="prefetch">My 2019 readings</a>
+      <a href="readings/2020" rel="prefetch">My 2020 readings</a>
+    </li>
+    <li>
+      <a href="readings/2019" rel="prefetch">My 2019 readings</a>
     </li>
   </ul>
 </div>
