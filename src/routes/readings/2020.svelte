@@ -110,7 +110,7 @@
 
 <div transition:slide={{ delay: 0, duration: 250, easing: sineOut }}>
 
-  <h1>My 2019 reading list</h1>
+  <h1>My 2020 reading list</h1>
 
   <ul>
     {#each books as { title, author, media, finished }}
